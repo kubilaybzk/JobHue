@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "JobHue",
+  "version": "1.2.0",
+  "description": "LinkedIn iş ilanlarını yeni, görüntülenen ve başvurulan olarak renklerle ayırır.",
+  "author": "Kubilay Bozak",
+  "homepage_url": "https://kubilaybzk.dev",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.linkedin.com/*"],
+  "action": {
+    "default_title": "JobHue",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

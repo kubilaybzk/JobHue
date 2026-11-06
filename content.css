@@ -1,0 +1,109 @@
+.lit-card {
+  position: relative !important;
+  border-radius: 0 !important;
+  transition: opacity 0.18s ease, background-color 0.18s ease !important;
+}
+
+.lit-card--new {
+  background-color: rgba(10, 102, 194, 0.07) !important;
+  box-shadow: inset 3px 0 0 #0a66c2 !important;
+  opacity: var(--lit-new-opacity, 1) !important;
+}
+
+.lit-card--viewed {
+  background-color: rgba(180, 120, 40, 0.08) !important;
+  box-shadow: inset 3px 0 0 #c37d16 !important;
+  opacity: var(--lit-viewed-opacity, 0.75) !important;
+}
+
+.lit-card--applied {
+  background-color: rgba(22, 163, 74, 0.08) !important;
+  box-shadow: inset 3px 0 0 #2f8f4e !important;
+  opacity: var(--lit-applied-opacity, 0.4) !important;
+}
+
+.lit-hide,
+hr.lit-hide {
+  display: none !important;
+}
+
+.lit-badge {
+  position: absolute;
+  top: 12px;
+  right: 42px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  color: #fff;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.lit-badge--new {
+  background: #0a66c2;
+}
+
+.lit-badge--viewed {
+  background: #c37d16;
+}
+
+.lit-badge--applied {
+  background: #2f8f4e;
+}
+
+.lit-legend {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #38434f;
+  font-size: 12px;
+  line-height: 1.2;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.lit-legend strong {
+  font-size: 11px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.lit-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lit-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.lit-legend i.new {
+  background: #0a66c2;
+}
+
+.lit-legend i.viewed {
+  background: #c37d16;
+}
+
+.lit-legend i.applied {
+  background: #2f8f4e;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JobHue</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="icons/icon48.png" width="36" height="36" alt="" />
+        <div>
+          <h1>JobHue</h1>
+          <p>Kartları bozmadan ayırır, istediğin gibi süzersin.</p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Görünürlük</h2>
+      <label class="row">
+        <span>Başvurulanları gizle</span>
+        <input id="hideApplied" type="checkbox" />
+      </label>
+      <label class="row">
+        <span>Görüntülenenleri gizle</span>
+        <input id="hideViewed" type="checkbox" />
+      </label>
+      <label class="row">
+        <span>Yenileri gizle</span>
+        <input id="hideNew" type="checkbox" />
+      </label>
+    </section>
+
+    <section>
+      <h2>Opaklık</h2>
+      <label class="slider">
+        <span>Başvurulanlar <b id="appliedOpacityValue">40%</b></span>
+        <input id="appliedOpacity" type="range" min="10" max="100" step="5" />
+      </label>
+      <label class="slider">
+        <span>Görüntülenenler <b id="viewedOpacityValue">75%</b></span>
+        <input id="viewedOpacity" type="range" min="10" max="100" step="5" />
+      </label>
+      <label class="slider">
+        <span>Yeniler <b id="newOpacityValue">100%</b></span>
+        <input id="newOpacity" type="range" min="10" max="100" step="5" />
+      </label>
+    </section>
+
+    <section>
+      <h2>Arayüz</h2>
+      <label class="row">
+        <span>Kart etiketleri</span>
+        <input id="showBadges" type="checkbox" />
+      </label>
+      <label class="row">
+        <span>Sayfa lejantı</span>
+        <input id="showLegend" type="checkbox" />
+      </label>
+    </section>
+
+    <section class="stats">
+      <div class="stat viewed">
+        <strong id="viewedCount">0</strong>
+        <span>görüntülenen</span>
+      </div>
+      <div class="stat applied">
+        <strong id="appliedCount">0</strong>
+        <span>başvurulan</span>
+      </div>
+    </section>
+
+    <footer>
+      <button id="clearViewed" type="button">Görüntülenenleri sıfırla</button>
+      <button id="clearApplied" type="button" class="ghost">Başvuruları sıfırla</button>
+    </footer>
+
+    <section class="about">
+      <div class="about-head">
+        <span class="avatar">KB</span>
+        <div>
+          <strong>Kubilay Bozak</strong>
+          <p>Geliştirici</p>
+        </div>
+      </div>
+      <div class="about-links">
+        <a href="https://kubilaybzk.dev" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="https://github.com/kubilaybzk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="coffee" href="https://buymeacoffee.com/kubilaybzk" target="_blank" rel="noopener noreferrer">Buy me a coffee</a>
+      </div>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>
